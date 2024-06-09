@@ -13,7 +13,7 @@ function cadastrar() {
 
     document.getElementById("resultado").innerHTML =
     "<p> Nome Completo: " + nomeCompleto + "</p>" +
-    "<p> Telefone de contato: " + nomeCompleto + "</p>" +
+    "<p> Telefone de contato: " + telefone + "</p>" +
     "<p> E-mail: " + email + "</p>" +
     "<p>  Data de nascimento: " + dataNascimento + "</p>" +
     "<p> Usuário: " + usuario + "</p>" +
