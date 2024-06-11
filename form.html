@@ -38,12 +38,12 @@
     <div>
         <form class="spacer" id="cadastroForm">
             <div class="borda">
-                <label>Nome completo<br><input type="text" id="nomeCompleto" placeholder="Nome Completo"></label><br>
-                <label>Número de telefone<br><input type="tel" id="telefone" placeholder="(xx) 9xxxx-xxxx"></label><br>
-                <label>E-mail:<br><input type="email" id="email" placeholder="mail@mail.com"></label><br>
-                <label>Data de nascimento:<br><input type="date" id="dataNascimento"></label><br>
-                <label>Usuário:<br><input type="text" id="usuario"></label><br>
-                <label>Senha:<br><input type="password" id="senha"></label><br>
+                <label for="nomeCompleto">Nome completo<br><input type="text" id="nomeCompleto" placeholder="Nome Completo" required></label><br>
+                <label for="telefone">Número de telefone<br><input type="tel" id="telefone" placeholder="(xx) 9xxxx-xxxx" required></label><br>
+                <label for="email">E-mail:<br><input type="email" id="email" placeholder="mail@mail.com" required></label><br>
+                <label for="dataNascimento">Data de nascimento:<br><input type="date" id="dataNascimento" required></label><br>
+                <label for="usuario">Usuário:<br><input type="text" id="usuario" required></label><br>
+                <label for="senha">Senha:<br><input type="password" id="senha" required></label><br>
             </div>
         <br>
         <button type="button" class="btn btn-primary" onclick="cadastrar()">Cadastrar</button>
