@@ -5,27 +5,26 @@ window.addEventListener('load', function() {
     const resultadoDiv = document.getElementById('resultado');
 
     cadastrarBtn.addEventListener('click', function() {
-        const nomeCompleto = document.getElementById('nomeCompleto').value;
-        const telefone = document.getElementById('telefone').value;
-        const email = document.getElementById('email').value;
-        const dataNascimento = document.getElementById('dataNascimento').value;
-        const usuario = document.getElementById('usuario').value;
-        const senha = document.getElementById('senha').value;
+        if (form.checkValidity()) {
+            const nomeCompleto = document.getElementById('nomeCompleto').value;
+            const telefone = document.getElementById('telefone').value;
+            const email = document.getElementById('email').value;
+            const dataNascimento = document.getElementById('dataNascimento').value;
+            const usuario = document.getElementById('usuario').value;
+            const senha = document.getElementById('senha').value;
 
-        if (nomeCompleto === "" || telefone === "" || email === "" || dataNascimento === "" || usuario === "" || senha === "") {
-            alert("Todos os campos são obrigatórios!");
-            return;
+            resultadoDiv.innerHTML = `
+                <h2>Dados Cadastrados</h2>
+                <p>Nome Completo: ${nomeCompleto}</p>
+                <p>Telefone de contato: ${telefone}</p>
+                <p>E-mail: ${email}</p>
+                <p>Data de nascimento: ${dataNascimento}</p>
+                <p>Usuário: ${usuario}</p>
+                <p>Senha: ${senha}</p>
+            `;
+        } else {
+            alert("Por favor preencha todos os campos!");
         }
-
-        resultadoDiv.innerHTML = `
-            <h2>Dados Cadastrados:</h2>
-            <p><strong>Nome Completo:</strong> ${nomeCompleto}</p>
-            <p><strong>Telefone:</strong> ${telefone}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Data de Nascimento:</strong> ${dataNascimento}</p>
-            <p><strong>Nome de Usuário:</strong> ${usuario}</p>
-            <p><strong>Senha:</strong> ${senha}</p>
-        `;
     });
 
     cancelarBtn.addEventListener('click', function() {
