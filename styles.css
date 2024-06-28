@@ -28,7 +28,7 @@
     border: 2px solid rgb(0, 0, 0);
     padding: 10px;
     width: 218px;
-    border-radius: 5px; /* opcional: para bordas arredondadas */
+    border-radius: 5px; 
     background-color: #b6e0f1;
 }
 
