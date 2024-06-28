@@ -1,9 +1,27 @@
-.spacer{
+/* tabela */
+.table-spacer table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-spacer th, .table-spacer td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+.navbar-toggler {
+    margin-left: 10px;
+}
+
+
+/* classe spacer que eu criei pra ficarem padrão*/
+
+.spacer {
     padding: 10px 0 0 25px;
 }
 
 .table-spacer {
-    margin-left: 25px; /* Adiciona um espaço à esquerda */
+    margin-left: 25px; 
 }
 
 .borda {
@@ -14,23 +32,24 @@
     background-color: #b6e0f1;
 }
 
-.navbar-custom{
+.navbar-custom {
     background-color: #286984 !important;
 }
 
-.navbar-brand{
+.navbar-brand {
     padding-left: 10px;
 }
+
 .nav-item {
     padding-left: 10px;
     padding-right: 10px;
 }
 
-.bg-footer{
+.bg-footer {
     background-color: #023246 !important;
     color: white !important;
 }
 
-.bg-footer a{
+.bg-footer a {
     color: white !important;
 }
