@@ -32,3 +32,43 @@ window.addEventListener('load', function() {
         resultadoDiv.innerHTML = '';
     });
 });
+
+/*calculadora*/
+
+document.getElementById('calcularBtn').addEventListener('click', function() {
+    const num1 = parseFloat(document.getElementById('numero1').value);
+    const num2 = parseFloat(document.getElementById('numero2').value);
+    const operacao = document.getElementById('operacao').value;
+    let resultado;
+
+    if (isNaN(num1) || isNaN(num2)) {
+        resultado = "Por favor, insira números válidos.";
+    } else {
+        switch (operacao) {
+            case 'adicao':
+                resultado = num1 + num2;
+                break;
+            case 'subtracao':
+                resultado = num1 - num2;
+                break;
+            case 'mult':
+                resultado = num1 * num2;
+                break;
+            case 'divisao':
+                if (num2 === 0) {
+                    resultado = "Não é possível dividir por zero.";
+                } else {
+                    resultado = num1 / num2;
+                }
+                break;
+            default:
+                resultado = "Operação inválida.";
+        }
+    }
+
+    document.getElementById('resultado').innerText = "Resultado: " + resultado;
+});
+
+
+
+
