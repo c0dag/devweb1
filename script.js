@@ -39,6 +39,7 @@ document.getElementById('calcularBtn').addEventListener('click', function() {
     const num1 = parseFloat(document.getElementById('numero1').value);
     const num2 = parseFloat(document.getElementById('numero2').value);
     const operacao = document.getElementById('operacao').value;
+    const resultadoDiv = document.getElementById('resultado');
     let resultado;
 
     if (isNaN(num1) || isNaN(num2)) {
@@ -66,9 +67,12 @@ document.getElementById('calcularBtn').addEventListener('click', function() {
         }
     }
 
-    document.getElementById('resultado').innerText = "Resultado: " + resultado;
+    resultadoDiv.innerText = "Resultado: " + resultado;
 });
 
+document.getElementById('limparBtn').addEventListener('click', function() {
+    document.getElementById('resultado').innerText = '';
+});
 
 
 
